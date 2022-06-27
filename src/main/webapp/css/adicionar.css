@@ -1,0 +1,98 @@
+body{
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 10%;
+    background-color: #6e0099;
+}
+main{
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    
+}
+.form{
+    height: 500px;
+    width: 100%;
+}
+.div-titulo{
+    margin-top: 3%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+h1{
+    font-size: 35px;
+    text-shadow: 2px 1px 2px #6e0099;
+    font-family: 'Roboto', sans-serif;
+
+}
+.buttons{
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding-left: 20%;
+    text-align: left;
+    height: 7%;
+}
+.btn-2{
+    background-color: #6e0099;
+    color: white;
+    width: 18%;
+    height: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    border-color:black;
+}
+.btn-2.btn-primary:hover{
+    background-image: linear-gradient(to right, #d684f6, #6e0099);
+    border-color:black;
+    color:black;
+  }
+  .container{
+    display: flex;
+  }
+  .div-img{
+    width: 50%;
+  }
+  img{
+    width: 100%;
+  }
+  .div-tabble{
+    height: 60%;
+    text-align: left;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: flex-start;
+    width: 50%;
+    
+  }
+.btn-3{
+    background-color: #a900eb;
+    color: white;
+    width: 25%;
+    height: 36%;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-color:black;
+}
+.btn-3.btn-primary:hover{
+    background-image: linear-gradient(to right, #d684f6, #6e0099);
+    border-color:black;
+    color:black;
+  }
+.btn-3-lg{
+    background-color: #452b96;
+  }
+input{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 50%;
+}
+.id{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 10%;
+}
