@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <title>Painel</title>
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/painel.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <section class="form">
+                <div class="div-titulo">
+                    <h1>Gerenciar Usuários</h1>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="novoUsuario()">Novo Usuário</button>
+                    <button class="btn-2 btn-primary">Relatório</button>
+                </div>
+                <div class="div-tabble">
+                    <table id="tabble">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Usuário</th>
+                                <th>E-mail</th>
+                                <th>Senha</th>
+                                <th>Opções</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>LordBluue3</td>
+                                <td>mikaelcandido71@gmail.com</td>
+                                <td>senha123</td>
+                                <td>
+                                    <button class="btn-3 btn-primary" onclick="editarUsuario()">Editar</button>
+                                    <button class="btn-4 btn-primary">Excluir</button> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="../js/script.js"></script>
+</html>
