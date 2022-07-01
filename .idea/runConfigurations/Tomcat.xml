@@ -1,10 +1,12 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="false">
+  <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.63" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="18">
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:63342/gerenciador de usuarios/src/main/webapp/index.html" />
+    <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
-      <artifact name="gerenciador de usuários:war">
+      <artifact name="gerenciador de usuarios:war">
         <settings>
-          <option name="CONTEXT_PATH" value="/gerenciador_de_usuários_war" />
+          <option name="CONTEXT_PATH" value="/gerenciador_de_usuarios_war" />
         </settings>
       </artifact>
     </deployment>
@@ -83,6 +85,7 @@
       <option name="Make" enabled="true" />
       <option name="BuildArtifacts" enabled="true">
         <artifact name="gerenciador de usuários:war" />
+        <artifact name="gerenciador de usuarios:war" />
       </option>
     </method>
   </configuration>

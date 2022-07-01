@@ -1,5 +1,5 @@
 function redirecionar(){
-        window.location.href = "telas/painel.html";
+        window.location.href = "main";
     
 }
 function novoUsuario(){
