@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Dao {
@@ -22,7 +23,7 @@ public class Dao {
         try{
             // Tentado conexão ao servidor
             Socket socket = new Socket(servidor, Integer.parseInt(porta));
-            System.out.println("Conectado!");
+            System.out.println("Conectado ao Server Socket!");
 
             // obter o fluxo de saída do soquete.
             OutputStream outputStream = socket.getOutputStream();
@@ -39,11 +40,6 @@ public class Dao {
             System.out.print("Resultado: ");
             objectOutputStream.writeObject(messages);
 
-            //recebendo mensagem do socket
-            DataInputStream dus = new DataInputStream(socket.getInputStream());
-            String mgs = dus.readUTF();
-            System.out.println(mgs);
-            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=");
             //fechando o socket
             System.out.println("Fechando o socket.");
             socket.close();
