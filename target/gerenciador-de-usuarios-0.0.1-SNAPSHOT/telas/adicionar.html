@@ -11,7 +11,7 @@
 
 <body>
     <main>
-        <section class="form">
+        <form class="form" name="frmUsuario" action="../insert">
             <div class="div-titulo">
                 <h1>Adicionar Usuários</h1>
             </div>
@@ -23,17 +23,17 @@
                     <img src="../img/adicionar2.jpg">
                 </div>
             <div class="div-tabble">
-                <input type="text" placeholder="Usuário" id="usuario"><br>
-                <input type="text" placeholder="E-mail" id="email"><br>
-                <input type="text" placeholder="Senha" id="senha"><br>
+                <input type="text" placeholder="Usuário" id="usuario" name="usuario"><br>
+                <input type="text" placeholder="E-mail" id="email" name="email"><br>
+                <input type="text" placeholder="Senha" id="senha" name="senha"><br>
                 
 
-                <button class="btn-3 btn-primary" onclick="validar()">Adicionar</button>
+                <button class="btn-3 btn-primary" onclick="validar()" type="button">Adicionar</button>
             </div>
         </div>
-        </section>
+        </form>
     </main>
 </body>
 <script src="../js/script.js"></script>
-<script src="../js/validar.ts"></script>
+<script src="../js/validar.js"></script>
 </html>
