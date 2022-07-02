@@ -6,3 +6,9 @@ Um gerenciador de usuários feito com java web, para realizar a adição, exclus
 
 # Painel
 <img src="https://cdn.discordapp.com/attachments/701489669673844887/990335316403564595/unknown.png" >
+
+# Adicionar
+<img src="https://cdn.discordapp.com/attachments/701489669673844887/992878712192258048/unknown.png" >
+
+# Editar
+<img src="https://cdn.discordapp.com/attachments/701489669673844887/992878906665353347/unknown.png" >
