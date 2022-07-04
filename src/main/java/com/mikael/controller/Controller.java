@@ -49,6 +49,10 @@ public class Controller extends HttpServlet {
 		jao.setUsuario(request.getParameter("usuario"));
 		jao.setEmail(request.getParameter("email"));
 		jao.setSenha(request.getParameter("senha"));
+		//Invocando método conexão
+		dao.conexao(jao);
+		//Redirecionando
+		response.sendRedirect("telas/painel.html");
 	}
 
 }
