@@ -13,12 +13,16 @@ import java.util.List;
 
 public class Dao {
 
-    private String porta = "5000";
-    private String servidor = "192.168.15.5";
+    private String porta = "5000"; //Qualquer porta entre 0 e 65535
+    private String servidor = "192.168.15.7"; //O seu IPV4
 
 
-    public void conexao(){
+    public void conexao(JavaBeans jao){
         JSONObject json = new JSONObject();
+
+        json.put("usuario",jao.getUsuario());
+        json.put("email",jao.getEmail());
+        json.put("senha",jao.getSenha());
 
         try{
             // Tentado conexão ao servidor
