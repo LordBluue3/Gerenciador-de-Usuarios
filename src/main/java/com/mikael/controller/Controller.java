@@ -1,6 +1,7 @@
 package com.mikael.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -54,5 +55,7 @@ public class Controller extends HttpServlet {
 		//Redirecionando
 		response.sendRedirect("telas/painel.html");
 	}
+
+
 
 }
