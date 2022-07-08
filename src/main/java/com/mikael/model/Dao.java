@@ -2,10 +2,7 @@ package com.mikael.model;
 
 import org.json.simple.JSONObject;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,6 +41,11 @@ public class Dao {
             System.out.print("Resultado: ");
             objectOutputStream.writeObject(messages);
 
+            //recebendo mensagem do socket
+            DataInputStream dus = new DataInputStream(socket.getInputStream());
+            String mgs = dus.readUTF();
+            System.out.println(mgs);
+
             //fechando o socket
             System.out.println("Fechando o socket.");
             socket.close();
@@ -52,4 +54,6 @@ public class Dao {
             e.printStackTrace();
         }
     }
+
+
 }
