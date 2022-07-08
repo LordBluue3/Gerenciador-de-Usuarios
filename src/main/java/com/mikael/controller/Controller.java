@@ -1,7 +1,6 @@
 package com.mikael.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,51 +10,48 @@ import javax.servlet.http.HttpServletResponse;
 import com.mikael.model.Dao;
 import com.mikael.model.JavaBeans;
 
-/**
- * Servlet implementation class Controller
- */
+
 @WebServlet({ "/Controller", "/main", "/insert", "/select", "/update", "/delete", "/report" })
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Dao dao = new Dao();
-	JavaBeans jao = new JavaBeans();
+	JavaBeans javaBeans = new JavaBeans();
 
     public Controller() {
         super();
     }
 
+	/*
+	* Método que recebe uma requisição do Servlet de um @WebServlet,
+	* ele verifica qual requição @WebServlet foi chamado e executa um método dessa requisição
+	*/
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Recebendo uma requisição WebServlet
-		String action = request.getServletPath();
-		System.out.println(action);
-		//Verificando qual requisição é e qual ação deve ser tomada
-		if(action.equalsIgnoreCase("/main")) {
-			listarUsuarios(request,response);
-		}else if(action.equalsIgnoreCase("/insert")) {
-			novoContato(request, response);
+		String requestServlet = request.getServletPath();
+		System.out.println(requestServlet);
+		if(requestServlet.equalsIgnoreCase("/main")) {
+			listUser(request,response);
+		}else if(requestServlet.equalsIgnoreCase("/insert")) {
+			newUser(request, response);
 		}else {
 			response.sendRedirect("index.html");
 		}
 	}
-	protected void listarUsuarios(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Redirecionando para o painel
+	/*
+	* Método que redireciona o usuário para o painel
+	*/
+	protected void listUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.sendRedirect("telas/painel.html");
 	}
-	protected void novoContato(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Testando o recebimento dos parametros
-		System.out.println(request.getParameter("usuario"));
-		System.out.println(request.getParameter("email"));
-		System.out.println(request.getParameter("senha"));
-		//Utilizando o objeto jao para setar os parametros na class JavaBeans
-		jao.setUsuario(request.getParameter("usuario"));
-		jao.setEmail(request.getParameter("email"));
-		jao.setSenha(request.getParameter("senha"));
-		//Invocando método conexão
-		dao.conexao(jao);
-		//Redirecionando
+	/*
+	 *Método que pega os parametros dos inputs do localizado na View telas/adicionar.html identificados pelo name=""
+	 * seta esses parametros na class JavaBeans, invoca o método da class Dao conexão
+	 * e redireciona para o painel.
+	 */
+	protected void newUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		javaBeans.setUser(request.getParameter("user"));
+		javaBeans.setEmail(request.getParameter("email"));
+		javaBeans.setPassword(request.getParameter("password"));
+		dao.connection(javaBeans);
 		response.sendRedirect("telas/painel.html");
 	}
-
-
-
 }
